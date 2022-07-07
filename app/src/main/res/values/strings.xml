@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">curious.shots_</string>
+
+    <string name="loadButtonString">Load</string>
+    <string name="applyButtonString">Apply</string>
+    <string name="saveButtonString">Save</string>
+    <string name="savingMessage">Image saved!</string>
+    <string name="originalButtonString">Original</string>
+    <string name="imageViewDescription">It\'s the image that will be modified.</string>
+    <string name="histogramViewDescription">It\'s the image histogram.</string>
+    <string name="width">Width: </string>
+    <string name="height">Height: </string>
+
+    <string name="openButtonString">Open</string>
+    <string name="historyButtonString">History</string>
+    <string name="presetsButton">Presets</string>
+    <string name="toolsButton">Tools</string>
+    <string name="filtersButton">Filters</string>
+
+    <string name="colorMenu">Color</string>
+    <string name="fancyMenu">Fancy</string>
+    <string name="blurMenu">Blur</string>
+    <string name="contourMenu">Contour</string>
+
+    <string name="histogramImageView">Histogram</string>
+    <string name="cancelButton">Cancel</string>
+    <string name="applyButton">Apply</string>
+    <string name="pickButton">Pick</string>
+    <string name="brushButton">Brush</string>
+    <string name="histogramButton">Histogram</string>
+    <string name="maskButton">Mask</string>
+    <string name="historyConfirmButton">Confirm</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="exif_viewer">Exif Viewer</string>
+    <string name="EV_0">0 EV</string>
+    <string name="the_photo_editing_app">Image Editor</string>
+</resources>

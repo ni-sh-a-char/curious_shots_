@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FiltersActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/linearLayoutFilters"
+            android:contentDescription="@string/imageViewDescription"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/img_default" />
+
+        <ImageView
+            android:id="@+id/histogramView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_above="@id/filtersMenu"
+            android:layout_margin="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/histbackground"
+            android:contentDescription="@string/histogramImageView"
+            android:padding="1dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFilters"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/cancelButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/cancelButton"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_cancel"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/filterNameButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/applyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/cancelButton"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_valid"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/filtersMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_marginBottom="0dp">
+
+            <HorizontalScrollView
+                android:id="@+id/itemMenuSchrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scrollbars="none"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/itemMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/stickersLineOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/stickersLineTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/stickersLineThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ImageButton
+                android:id="@+id/pickButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/itemMenuSchrollView"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/pickButton"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_pick"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/maskButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pickButton"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/maskButton"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_mask"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/histogramButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maskButton"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/histogramButton"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_histogram"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/switchValue1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemMenuSchrollView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:visibility="visible" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/switchValue1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemMenuSchrollView"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/switchValue1"
+                android:layout_toEndOf="@id/histogramButton">
+
+                <SeekBar
+                    android:id="@+id/colorSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gradient_color"
+                    android:max="359"
+                    android:min="0"
+                    android:progressBackgroundTint="#00000000"
+                    android:progressTint="#00000000"
+                    android:thumbTint="#000"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/seekBarValue1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/colorSeekBar"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:visibility="visible" />
+
+                <SeekBar
+                    android:id="@+id/seekBar1"
+                    style="@android:style/Widget.Material.SeekBar.Discrete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seekBarValue1"
+                    android:layout_alignParentStart="true"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/seekBarValue2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seekBar1"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:visibility="visible" />
+
+                <SeekBar
+                    android:id="@+id/seekBar2"
+                    style="@android:style/Widget.Material.SeekBar.Discrete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seekBarValue2"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
